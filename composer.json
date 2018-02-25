@@ -1,0 +1,6 @@
+{
+    "require": {
+        "zerochip/zimcell": "dev-master",
+        "filp/whoops": "^2.1"
+    }
+}

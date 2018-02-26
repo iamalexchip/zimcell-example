@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use Zerochip\ZimCell;
-
+/*
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
@@ -176,9 +176,9 @@ if (isset($_POST['provider']))
 		        <div class="col-md-4 col-md-offset-4" style="margin-top: 20px">
 				    <div class="input-group input-group-lg" style="width: 100%">
 				    <?php if (!isset($runall) && isset($cellnum)): ?>
-				      <input type="text" name="cellnum" class="form-control" placeholder="Enter a phone number" value="<?php echo $cellnum; ?>">
+				      <input type="text" name="cellnum" class="form-control" placeholder="Enter a phone number" value="<?php echo $cellnum; ?>" required>
 				    <?php else: ?>
-				      <input type="text" name="cellnum" class="form-control" placeholder="Enter a phone number">
+				      <input type="text" name="cellnum" class="form-control" placeholder="Enter a phone number" required>
 				    <?php endif; ?>
 				    </div><!-- /input-group -->
 				</div><!-- /.col-lg-6 -->

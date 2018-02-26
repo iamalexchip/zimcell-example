@@ -24,6 +24,7 @@ if (isset($_POST['provider']))
 	$provider = $_POST['provider'];
 }
 
+/**************************/
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,7 +65,7 @@ if (isset($_POST['provider']))
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="font-size: 22px; margin-top: 5px">Zimcell Demo</a>
+            <a class="navbar-brand" href="/" style="font-size: 22px; margin-top: 5px">Zimcell Demo</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">

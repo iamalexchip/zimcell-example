@@ -1,7 +1,6 @@
 {
     "require": {
-        "zerochip/zimcell": "dev-master",
         "filp/whoops": "^2.1",
-        "phpunit/phpunit": "^7.0"
+        "zerochip/zimcell": "dev-master"
     }
 }

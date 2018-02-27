@@ -1,7 +1,8 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-use Zerochip\ZimCell;
+use Zerochip\Zimcell;
+
 /*
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
@@ -69,7 +70,7 @@ if (isset($_POST['provider']))
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://github.com/zerochip/zimcell"><img src="/assets/images/GitHub-Mark-32px.png" /></a></li>
+              <li><a href="https://github.com/zerochip/Zimcell"><img src="/assets/images/GitHub-Mark-32px.png" /></a></li>
               <li><a href="#"><img src="/assets/images/rants-icon.jpg" /></a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -95,53 +96,38 @@ if (isset($_POST['provider']))
 			      					</thead>
 			      					<tr>
 			      						<td>refine</td>
-			      						<td><?php echo ZimCell::refine($cellnum); ?></td>
+			      						<td><?php echo Zimcell::refine($cellnum); ?></td>
 			      						<td>removes spaces, the leading 0 and country code if present</td>
 			      					</tr>
 			      					<tr>
 			      						<td>valid</td>
-			      						<td><?php echo (ZimCell::valid($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
+			      						<td><?php echo (Zimcell::valid($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
 			      						<td>true if the cellnumber is a valid Zimbabwean phone number</td>
 			      					</tr>
 			      					<tr>
 			      						<td>intlFormat</td>
-			      						<td><?php echo ZimCell::intlFormat($cellnum); ?></td>
+			      						<td><?php echo Zimcell::intlFormat($cellnum); ?></td>
 			      						<td>converts the phone number to international format</td>
 			      					</tr>
 			      					<tr>
 			      						<td>getProvider</td>
-			      						<td><?php echo (is_null(ZimCell::getProvider($cellnum))) ? 'Unknown' : ZimCell::getProvider($cellnum); ?></td>
+			      						<td><?php echo (is_null(Zimcell::getProvider($cellnum))) ? 'Unknown' : Zimcell::getProvider($cellnum); ?></td>
 			      						<td>returns the servive provider for the given number</td>
 			      					</tr>
 			      					<tr>
-			      						<td>isEconet</td>
-			      						<td><?php echo (ZimCell::isEconet($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
+			      						<td>is('econet', <?php echo $cellnum; ?>)</td>
+			      						<td><?php echo (Zimcell::is('econet', $cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
 			      						<td>true if the number is a econet number</td>
 			      					</tr>
 			      					<tr>
-			      						<td>isEcocash</td>
-			      						<td><?php echo (ZimCell::isEcocash($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
-			      						<td>true if the number is a econet number</td>
+			      						<td>is('telecel', <?php echo $cellnum; ?>)</td>
+			      						<td><?php echo (Zimcell::is('telecel', $cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
+			      						<td>true if the number is a telecel number</td>
 			      					</tr>
 			      					<tr>
-			      						<td>isTelecel</td>
-			      						<td><?php echo (ZimCell::isTelecel($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
-			      						<td>alternative function for isEconet</td>
-			      					</tr>
-			      					<tr>
-			      						<td>isTelecash</td>
-			      						<td><?php echo (ZimCell::isTelecash($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
-			      						<td>alternative function for isTelecel</td>
-			      					</tr>
-			      					<tr>
-			      						<td>isNetone</td>
-			      						<td><?php echo (ZimCell::isNetone($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
+			      						<td>is('netone', <?php echo $cellnum; ?>)</td>
+			      						<td><?php echo (Zimcell::is('Netone', $cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
 			      						<td>true if the number is a netone number</td>
-			      					</tr>
-			      					<tr>
-			      						<td>isOnemoney</td>
-			      						<td><?php echo (ZimCell::isOnemoney($cellnum)) ? 'TRUE' : 'FALSE'; ?></td>
-			      						<td>alternative function for isNetone</td>
 			      					</tr>
 			      				</table>
 

@@ -80,7 +80,7 @@ if (isset($_POST['provider']))
       	<div class="col-md-12 card">
       		<div class="text-center">
 	      		<h2>Zimcell package demo</h2>
-	      		<p>This is a demo of the Zimcell package for verifying zimbabwean phone numbers.</p>
+	      		<p>This is a demo of the Zimcell php package for verifying zimbabwean phone numbers.</p>
 
 		      	<?php if (isset($cellnum)): ?>
 			    	<div class="col-md-12">
@@ -169,6 +169,7 @@ if (isset($_POST['provider']))
 			      			
 			      			<?php endif; ?>
 				    	<hr>
+				    	<strong>Try another number</strong>
 			      	</div>
 		      	<?php endif; ?>
 		    </div>

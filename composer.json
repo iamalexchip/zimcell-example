@@ -1,6 +1,6 @@
 {
     "require": {
         "filp/whoops": "^2.1",
-        "zerochip/zimcell": "dev-master"
+        "zerochip/zimcell": "^1.0"
     }
 }

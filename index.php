@@ -31,6 +31,7 @@ if (isset($_POST['provider']))
 <html>
 <head>
 	<title>Zimcell - A package for verifying providers for Zimbabwean phone numbers</title>
+    <link rel="icon" type="image/png" href="/assets/images/rants-icon.png">
 	<link href="/assets/css/bootstrap.css" rel="stylesheet">
 	<style>
 		body {
@@ -71,7 +72,7 @@ if (isset($_POST['provider']))
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="https://github.com/zerochip/Zimcell"><img src="/assets/images/GitHub-Mark-32px.png" /></a></li>
-              <li><a href="#"><img src="/assets/images/rants-icon.jpg" /></a></li>
+              <li><a href="#"><img src="/assets/images/rants-icon.png" /></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
